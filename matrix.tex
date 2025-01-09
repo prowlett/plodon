@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{amsmath}
+\begin{document}
+    
+    We wish to count the number of paths of length two in this graph that aren't just returning to the same vertex.
+    
+    \begin{center}
+        \begin{tikzpicture}
+            \foreach \i in {0,1,2}{
+                \foreach \j in {0,1,2}{
+                    \node[draw,circle,fill=black] (\i\j) at (\i,\j) {};
+                }
+            }
+            \foreach \a/\b in {00/01,00/10,00/11,01/02,01/10,01/11,01/12,02/11,02/12,10/11,10/20,10/21,11/12,11/20,11/21,11/22,12/21,12/22,20/21,21/22}{
+                \draw (\a) -- (\b);
+            }
+        \end{tikzpicture}
+    \end{center}
+    
+    Adjacency matrix, taking nodes in order from top to bottom, left to right:
+    
+    \[\mathbf{M} = \begin{bmatrix}
+        0 & 1 & 0 & 1 & 1 & 0 & 0 & 0 & 0\\
+        1 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0\\
+        0 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 0\\
+        1 & 1 & 0 & 0 & 1 & 0 & 1 & 1 & 0\\
+        1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1\\
+        0 & 1 & 1 & 0 & 1 & 0 & 0 & 1 & 1\\
+        0 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 0\\
+        0 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 1\\
+        0 & 0 & 0 & 0 & 1 & 1 & 0 & 1 & 0\\
+    \end{bmatrix}\]
+    
+    Then
+    
+    \[\mathbf{M}^2 = \begin{bmatrix}
+        3 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 1\\
+        2 & 5 & 2 & 2 & 4 & 2 & 2 & 3 & 2\\
+        2 & 2 & 3 & 2 & 2 & 2 & 1 & 2 & 2\\
+        2 & 2 & 2 & 5 & 4 & 3 & 2 & 2 & 2\\
+        2 & 4 & 2 & 4 & 8 & 4 & 2 & 4 & 2\\
+        2 & 2 & 2 & 3 & 4 & 5 & 2 & 2 & 2\\
+        2 & 2 & 1 & 2 & 2 & 2 & 3 & 2 & 2\\
+        2 & 3 & 2 & 2 & 4 & 2 & 2 & 5 & 2\\
+        1 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 3\\
+    \end{bmatrix}\]
+    
+    So there are three paths leading from vertex 1 back to vertex 1, etc. 
+    
+    We ignore the main diagonal (which are paths that go to another vertex and then return on the same line) and sum the entries. The sum of the entries is 160, but this counts the paths in both directions. Since we only want one direction, we halve this for 80.
+    
+    
+\end{document}
