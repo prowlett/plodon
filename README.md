@@ -2,9 +2,9 @@
 
 ## Overview
 
-cf. Colin Beveridge's [alfabet](https://github.com/icecolbeveridge/alfabet/).
+Combinatorics for [Will](https://www.wmad.co.uk/about/)'s alien alphabet (which he called Plodon).
 
-Combinatorics for [Will](https://www.wmad.co.uk/about/)'s alien alphabet.
+cf. Colin Beveridge's [alfabet](https://github.com/icecolbeveridge/alfabet/).
 
 Q: How many "letters" can be made, where each letter is two non-crossing paths made by connecting three distinct adjacent points in a 3-by-3 grid?
 
