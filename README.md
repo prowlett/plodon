@@ -26,6 +26,7 @@ This counts all possible pairs of paths twice, i.e. each pair (path1, path2) is 
 
 The output from running `plodon.py`:
 
+```
 1. path 1 is 1-2-3; 32 options for path 2
 2. path 1 is 1-2-4; 27 options for path 2
 3. path 1 is 1-2-5; 12 options for path 2
@@ -107,3 +108,4 @@ The output from running `plodon.py`:
 79. path 1 is 8-5-9; 12 options for path 2
 80. path 1 is 8-6-9; 27 options for path 2
 Total: 1104
+```
