@@ -6,7 +6,7 @@ Combinatorics for [Will](https://www.wmad.co.uk/about/)'s alien alphabet.
 
 Q: How many "letters" can be made, where each letter is two non-crossing paths made by connecting three distinct adjacent points in a 3-by-3 grid?
 
-i.e. we wish to count the ways to draw two distinct paths of length 3 which do not cross in the following graph.
+i.e. we wish to count the ways to draw two distinct paths of length 2 which do not cross in the following graph.
 
 ![3 by 3 grid of vertices with adjacent vertices connected with an edge.](graph.png)
 
