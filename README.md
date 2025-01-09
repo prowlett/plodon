@@ -1,5 +1,7 @@
 # Plodon
 
+## Overview
+
 cf. Colin Beveridge's [alfabet](https://github.com/icecolbeveridge/alfabet/).
 
 Combinatorics for [Will](https://www.wmad.co.uk/about/)'s alien alphabet.
@@ -12,7 +14,13 @@ i.e. we wish to count the ways to draw two distinct paths of length 2 which do n
 
 A: I agree with Colin's 552. 
 
-The approach here is to make the graph (in networkx), find the 80 possible single paths and, for each, make the graph of remaining vertices and edges that don't lead to crossings and count the number of 2-paths within this. 
+## Files included
+
+Python code for the analysis described below, also LaTeX code for drawing the graph and some adjacency matrix notes.
+
+## Program
+
+The approach here is to make the graph (in networkx), find the 80 possible single paths by removing vertices and their neighbours in turn and, for each, make the graph of remaining vertices and edges that don't lead to crossings and count the number of 2-paths within this. 
 
 This counts all possible pairs of paths twice, i.e. each pair (path1, path2) is also counted the other way around. 
 
