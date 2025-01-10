@@ -2,7 +2,7 @@
 
 ## Overview
 
-Combinatorics for [Will](https://www.wmad.co.uk/about/)'s alien alphabet (which he called Plodon).
+Combinatorics for [Will](https://www.wmad.co.uk/about/)'s alien alphabet (which they called Plodon).
 
 cf. Colin Beveridge's [alfabet](https://github.com/icecolbeveridge/alfabet/).
 
